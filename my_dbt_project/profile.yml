@@ -1,0 +1,15 @@
+logan_data_project:
+  outputs:
+    dev:
+      type: snowflake
+      account: alation_partner
+      user: LD_USER
+      password: Logan@2024
+      role: LOGAN_DATA_ROLE
+      database: LOGAN_DATA
+      warehouse: LOAD_WH
+      schema: TALEND
+      threads: 4
+      client_session_keep_alive: False
+      query_tag: dbt
+  target: dev

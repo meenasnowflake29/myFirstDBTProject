@@ -16,7 +16,7 @@ WITH source_data AS (
         `Month Name` AS month_name,
         CAST(`Year` AS INT) AS year,
         DATE(PARSE_DATE('%m/%d/%Y', Date)) AS order_date
-    FROM {{ source('google_sheets', 'your_table_name') }}
+    FROM {{ source('google_sheets', 'navanita_fivetran_test') }}
 ),
 
 calculated_metrics AS (

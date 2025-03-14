@@ -1,6 +1,6 @@
 
 -- Use the `ref` function to select from other models
-
-select *
-from {{ ref('my_first_dbt_model') }}
-where id = 1
+SELECT 
+    *,
+    CURRENT_TIMESTAMP AS data_loaded_time
+FROM google_sheets.navanita_fivetran_test;

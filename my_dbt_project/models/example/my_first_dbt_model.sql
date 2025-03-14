@@ -3,9 +3,7 @@ WITH source_data AS (
         Segment,
         Country,
         Product,
-        `Discount Band` AS discount_band,
-        `Month Name` AS month_name,
-        DATE(PARSE_DATE('%m/%d/%Y', Date)) AS order_date
+        `Discount Band` AS discount_band
     FROM {{ source('google_sheets', 'navanita_fivetran_test') }}
 ),
 
@@ -22,10 +20,8 @@ SELECT
     Country,
     Product,
     discount_band,
-    month_name,
     emp_name,
-    emp_surname,
-    year
+    emp_surname
 FROM calculated_metrics
 WHERE emp_name = "navanita"
 ORDER BY order_date;

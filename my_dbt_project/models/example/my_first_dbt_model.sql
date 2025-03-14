@@ -1,27 +1,26 @@
+WITH source_data AS (
+    SELECT
+        id,
+        name,
+        created_at,
+        updated_at
+    FROM {{ source('google_sheets', 'navanita_fivetran_test') }}
+),
 
-/*
-    Welcome to your first dbt model!
-    Did you know that you can also configure models directly within SQL files?
-    This will override configurations stated in dbt_project.yml
-
-    Try changing "table" to "view" below
-*/
-
-{{ config(materialized='table') }}
-
-with source_data as (
-
-    select 1 as id
-    union all
-    select null as id
-
+transformed_data AS (
+    SELECT
+        id,
+        name,
+        created_at,
+        updated_at,
+        DATE(created_at) AS created_date,
+        DATE(updated_at) AS updated_date
+    FROM source_data
 )
 
-select *
-from source_data
-
-/*
-    Uncomment the line below to remove records with null `id` values
-*/
-
--- where id is not null
+SELECT
+    id,
+    name,
+    created_date,
+    updated_date
+FROM transformed_data

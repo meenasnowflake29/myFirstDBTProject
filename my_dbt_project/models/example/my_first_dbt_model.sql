@@ -3,7 +3,7 @@ WITH source_data AS (
         Segment,
         Country,
         Product,
-        `Discount Band` AS discount_band
+        "Discount Band" AS discount_band
     FROM {{ source('google_sheets', 'navanita_fivetran_test') }}
 ),
 

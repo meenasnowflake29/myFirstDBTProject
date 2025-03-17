@@ -1,4 +1,8 @@
+{{ config(materialized='table') }}
+
 SELECT 
-    *,
-    CURRENT_TIMESTAMP AS data_loaded_time  -- Adds a new column
+    ROW_NUMBER() OVER () AS student_id, 
+    "Student Name", 
+    "Class Level", 
+    "Major"   -- Adds a new column
 FROM LOGAN_DATA.GOSHEET.GOTABLE

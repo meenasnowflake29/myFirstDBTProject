@@ -1,7 +1,7 @@
 {{ config(materialized='table') }}
 
 SELECT 
-    ROW_NUMBER() OVER (ORDER BY "Student Name") AS student_id, 
+    ROW_NUMBER() OVER (ORDER BY "Student Name" ASC) AS student_id, 
     "Student Name", 
     "Class Level", 
     "Major"

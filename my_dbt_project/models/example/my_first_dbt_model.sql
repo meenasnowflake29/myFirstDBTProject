@@ -15,7 +15,7 @@
 WITH YearlySales AS (
     SELECT Year, Country, SUM(Sales) AS Country_Sales,
            SUM(SUM(Sales)) OVER (PARTITION BY Year) AS Total_Sales
-    FROM sales_data
+    FROM LOGAN_DATA.navanita_dummy_data.dummy_data
     GROUP BY Year, Country
 )
 SELECT Year, Country, Country_Sales, 

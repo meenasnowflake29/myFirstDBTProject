@@ -10,6 +10,6 @@ logan_data_project:
       warehouse: LOAD_WH
       schema: TALEND
       threads: 4
-      client_session_keep_alive: True
+      client_session_keep_alive: False
       query_tag: dbt
   target: dev

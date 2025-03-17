@@ -5,4 +5,4 @@ sources:
     database: LOGAN_DATA
     schema: TALEND
     tables:
-      - name: navanita_fivetran_test
+      - name: dummy_data

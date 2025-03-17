@@ -16,4 +16,4 @@ GROUP BY Country
 --        (SUM(Sales) - LAG(SUM(Sales)) OVER (ORDER BY Year)) / LAG(SUM(Sales)) OVER (ORDER BY Year) * 100 AS YoY_Growth
 -- FROM sales_data
 -- GROUP BY Year
--- ORDER BY Year;
+-- ORDER BY Year

@@ -6,4 +6,4 @@ SELECT
     class_level, 
     major
 FROM LOGAN_DATA.GOSHEET.GOTABLE
-ORDER BY major ASC;
+ORDER BY major ASC

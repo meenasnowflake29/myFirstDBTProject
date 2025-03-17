@@ -1,9 +1,9 @@
 {{ config(materialized='table') }}
 
 SELECT 
-    MAJOR, 
-    CLASS_LEVEL, 
+    "Major", 
+    "Class Level", 
     COUNT(*) AS student_count
 FROM LOGAN_DATA.GOSHEET.GOTABLE
-GROUP BY MAJOR, CLASS_LEVEL
-ORDER BY MAJOR, CLASS_LEVEL;
+GROUP BY "Major", "Class Level"
+ORDER BY "Major", "Class Level"

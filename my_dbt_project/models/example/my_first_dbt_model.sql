@@ -1,4 +1,4 @@
 SELECT 
-    Country, 
-    "Units Sold" AS units_sold
-FROM LOGAN_DATA.TALEND.navanita_fivetran_test
+    *,
+    CURRENT_TIMESTAMP AS data_loaded_time_tm
+FROM LOGAN_DATA.navanita_dummy_data.dummy_data

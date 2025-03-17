@@ -1,9 +1,9 @@
 {{ config(materialized='table') }}
 
 SELECT 
-    ROW_NUMBER() OVER (ORDER BY "Major" ASC) AS student_id, 
-    "Student Name" AS student_name, 
-    "Class Level" AS class_level, 
-    "Major" AS major
+    MAJOR, 
+    CLASS_LEVEL, 
+    COUNT(*) AS student_count
 FROM LOGAN_DATA.GOSHEET.GOTABLE
-ORDER BY "Major" ASC
+GROUP BY MAJOR, CLASS_LEVEL
+ORDER BY MAJOR, CLASS_LEVEL;

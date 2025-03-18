@@ -1,4 +1,6 @@
-SELECT *,
+SELECT Student_ID, 
+       Full_Name, 
+       Age,
   CASE 
     WHEN Age < 20 THEN 'Teen'
     WHEN Age BETWEEN 20 AND 25 THEN 'Young Adult'

@@ -1,0 +1,4 @@
+SELECT Student_ID, 
+       CAST(latitude AS FLOAT) AS Lat, 
+       CAST(longitude AS FLOAT) AS Lon 
+FROM LOGAN_DATA.DESTINATIONMEENASTDDATA.STUDATA

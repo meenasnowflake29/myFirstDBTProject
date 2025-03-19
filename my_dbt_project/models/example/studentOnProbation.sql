@@ -1,4 +1,5 @@
-SELECT Student_ID,Full_Name
+SELECT Student_ID, 
+    Full_Name,
 FROM LOGAN_DATA.DESTINATIONMEENASTDDATA.STUDATA
 WHERE GPA < 2.5
   AND Academic_Probation = TRUE

@@ -1,0 +1,11 @@
+SELECT 
+    YEAR,
+    COUNT(*) AS number_of_students_enrolled
+FROM 
+ LOGAN_DATA.DESTINATIONMEENASTDDATA.STUDATA
+WHERE 
+    ENROLLMENT_STATUS = 'Enrolled'
+GROUP BY 
+    YEAR
+ORDER BY 
+    YEAR

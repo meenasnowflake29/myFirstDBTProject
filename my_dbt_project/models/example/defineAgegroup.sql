@@ -7,4 +7,4 @@ SELECT Student_ID,
     WHEN Age BETWEEN 26 AND 30 THEN 'Adult'
     ELSE 'Senior'
   END AS Age_Group
-FROM LOGAN_DATA.destinationmeenastddata.studata 
+FROM LOGAN_DATA.DESTINATIONMEENASTDDATA.STUDATA
